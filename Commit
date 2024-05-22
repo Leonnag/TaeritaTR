@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int  menu();
+void pms();
+void pms_rango();
+int main(){
+	int op;
+	do{
+	  op=menu();
+		
+		if(op==1){
+			pms();
+			
+		}
+		else if(op==2){
+			pms_rango();
+		}
+		else printf("Gracias por usarme :D");
+		
+	}while(op!=3);
+}
+int menu(){
+	int x;
+	printf("Ingrese el 1 para mostrar numero pms hasta un numero");
+	printf("\nIngrese el 2 para numeros pms en un rango seleccionado");
+	printf("\nIngrese el 3 para salir del programa:");
+	scanf("%d",&x);
+	return x;
+}
